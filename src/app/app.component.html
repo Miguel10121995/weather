@@ -1,0 +1,28 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-body">
+        <h2 class="mx-auto">"Clima CDMX"</h2>
+  <form (submit)="submitLocation(cityId)">
+    <label><input type="radio"  value="5506956" id="lasv" name="clima" checked autofocus #cityId>Las Vegas</label>
+    <label><input type="radio"  value="3600382" id="vera" name="clima" autofocus #cityId>Veracruz</label>
+    <label><input type="radio"  value="1705545" id="losa" name="clima" autofocus #cityId>Los Angeles</label>
+    <label><input type="radio"  value="3530597" id="cdmx" name="clima" autofocus #cityId>Ciudad de México</label>
+    <button class="btn btn-primary btn-block mt-2">
+      Obtener clima
+    </button>
+  </form>
+</div>
+</div>
+<div class="col-md-6">
+<div *ngIf="weather" class="card card-body text-center">
+  <h1 class="h4">Weather Information</h1>
+  <p>Ciudad: {{weather.name}}</p>
+  <p>Temperatura: {{weather.main.temp}} °C</p>
+  <p>Velocidad del viento: {{weather.wind.speed}}</p>
+  <p>Latitud: {{weather.coord.lat}}</p>
+  <p>Longitud: {{weather.coord.lon}}</p>
+</div>
+</div>
+</div>
+</div>
